@@ -44,12 +44,12 @@ pytgvoip-pyrogram 直接依赖: py3.4+的版本, Pyrogram, PytgVoIP
                                                       ↓
                    CMake, C++11-compatible compiler, Python headers, libtgvoip
                                                                          ↓
-                                                    distributions: apt install make autoconf automake gcc g++ openssl libssl-dev libopus0 libopus-dev
+                                                    Debian-based distributions: apt install make autoconf automake gcc g++ openssl libssl-dev libopus0 libopus-dev
                                                     Archlinux-based distributions: pacman -S make autoconf automake gcc openssl opus
                                                     macOS: brew install make autoconf automake gcc g++ openssl opus
                                                                          ↓
                                                                       还需要自己安装:
-                                                                      $ cd /tmp
+                                                        $ cd /tmp
                                                         $ git clone https://github.com/grishka/libtgvoip/
                                                         $ cd libtgvoip
                                                         $ git checkout b6ac2911  # confirmed to work with this version, others would require testing
