@@ -37,6 +37,33 @@ ffmpeg -f s16le -ac 1 -ar 48000 -acodec pcm_s16le -i output.raw output.mp3  # de
 #### 更多示例请参考
 https://github.com/bakatrouble/pytgvoip_pyrogram/tree/master/examples
 
+##### 如果你想在本机安装(强烈不推荐, 需要的环境太多, 不好排查问题)
+
+pytgvoip-pyrogram 直接依赖: py3.4+的版本, Pyrogram, PytgVoIP
+                                                      ↓
+                   CMake, C++11-compatible compiler, Python headers, libtgvoip
+                                                                         ↓
+                                                    distributions: apt install make autoconf automake gcc g++ openssl libssl-dev libopus0 libopus-dev
+                                                    Archlinux-based distributions: pacman -S make autoconf automake gcc openssl opus
+                                                    macOS: brew install make autoconf automake gcc g++ openssl opus
+                                                                         ↓
+                                                                      还需要自己安装:
+                                                                      $ cd /tmp
+                                                        $ git clone https://github.com/grishka/libtgvoip/
+                                                        $ cd libtgvoip
+                                                        $ git checkout b6ac2911  # confirmed to work with this version, others would require testing
+
+                                                        $ export CFLAGS="-O3"
+                                                        $ export CXXFLAGS="-O3"
+                                                        $ autoreconf --force --install
+                                                        $ ./configure --enable-audio-callback --enable-static=no
+                                                        $ make  # add "-jN" flag for multithreaded build, N=(cpu core count + 1) is recommended
+                                                        $ make install
+
+
+Pyrogram: https://github.com/pyrogram/pyrogram
+PytgVoIP: https://github.com/bakatrouble/pytgvoip
+libtgvoip: https://pytgvoip.readthedocs.io/en/latest/guides/libtgvoip.html
 
 
 
