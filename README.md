@@ -34,6 +34,8 @@ ffmpeg -i input.mp3 -f s16le -ac 1 -ar 48000 -acodec pcm_s16le input.raw  # enco
 ffmpeg -f s16le -ac 1 -ar 48000 -acodec pcm_s16le -i output.raw output.mp3  # decode
 ```
 
+#### 更多示例请参考
+https://github.com/bakatrouble/pytgvoip_pyrogram/tree/master/examples
 
 
 
