@@ -18,7 +18,8 @@
 ![查看需要拨打电话的用户名](/pic/call_user_name.png)
 
 ### 初次运行需要登录, 生成一个session文件(如果没有session即可认为为初次登录)，以后运行使用这个session文件确认用户身份
-####初次运行界面
+
+#### 初次运行界面
 ![初次运行界面](/pic/code_login.png)
 
 #### 输入完验证码之后telegram会提示该账号在某一个ip登录
