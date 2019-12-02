@@ -39,6 +39,7 @@ https://github.com/bakatrouble/pytgvoip_pyrogram/tree/master/examples
 
 ##### 如果你想在本机安装(强烈不推荐, 需要的环境太多, 不好排查问题)
 
+```
 pytgvoip-pyrogram 直接依赖: py3.4+的版本, Pyrogram, PytgVoIP
                                                       ↓
                    CMake, C++11-compatible compiler, Python headers, libtgvoip
@@ -59,7 +60,7 @@ pytgvoip-pyrogram 直接依赖: py3.4+的版本, Pyrogram, PytgVoIP
                                                         $ ./configure --enable-audio-callback --enable-static=no
                                                         $ make  # add "-jN" flag for multithreaded build, N=(cpu core count + 1) is recommended
                                                         $ make install
-
+```
 
 Pyrogram: https://github.com/pyrogram/pyrogram
 PytgVoIP: https://github.com/bakatrouble/pytgvoip
